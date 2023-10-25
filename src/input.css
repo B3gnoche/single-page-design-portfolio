@@ -1,0 +1,244 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles (bullets/numbers) */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Default Image Sizing */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove default button styling */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
+/* Set default font size and family */
+body {
+  color: var(--body--text-color);
+  font-size: var(--font--s-body);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: var(--font--w-1);
+  background-color: var(--color--light-cream);
+  line-height: var(--font--lh-main);
+}
+
+/* Variables */
+:root {
+  --color--galactic-blue: #755cde;
+  --color--summer-yellow: #f6a560;
+  --color--pink-salmon: #f39e9e;
+  --color--light-red: #eb7565;
+  --color--cyan: #61c4b7;
+  --color--maroon: #552049;
+  --color--black: #030303;
+  --color--medium-brown: #7a746e;
+  --color--light-cream: #fff7f0;
+  --font--s-h1: 3.5rem;
+  --font--s-h2: 2.5rem;
+  --font--s-h3: 2rem;
+  --font--s-large: 1.5rem;
+  --font--s-body: 1.125rem;
+  --font--lh-main: 1.5;
+  --font--lh-h: normal;
+  --font--w-1: 500;
+  --font--w-2: 700;
+  --body--text-color: var(--color--medium-brown);
+  --btn--color: var(--color--black);
+  --btn--color-hover: var(--color--galactic-blue);
+}
+
+h1 {
+  font-size: var(--font--s-h1);
+  margin-bottom: 1.4rem;
+}
+h2 {
+  font-size: var(--font--s-h2);
+}
+h3 {
+  font-size: var(--font--s-h3);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color--black);
+  font-weight: var(--font--w-2);
+  line-height: var(--font--lh-h);
+}
+
+/* Global Classes */
+.header {
+  padding: 2rem 0;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.font-s-large {
+  font-size: var(--font--s-large);
+}
+
+/* Header Classes */
+
+.container.is--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Classes */
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Button Styles */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-weight: var(--font--w-2);
+  text-decoration: none;
+  color: var(--color--light-cream);
+  background-color: var(--btn--color);
+  padding: 0.75rem 2.75rem;
+  line-height: 175%;
+  border-radius: 100vw;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: var(--btn--color-hover);
+}
+
+/* -- Section Specific Styles -- */
+
+/* Hero Section Classes */
+
+section.is--hero {
+  padding: 4rem 0 5rem 0;
+}
+
+p.is--hero {
+  max-width: 45rem;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.grid.is--hero {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  color: var(--color--light-cream);
+}
+
+/* Hero Cards */
+.card.is--hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card.is--hero.is--graphic {
+  background-color: var(--color--galactic-blue);
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.card.is--hero.is--uiux {
+  background-color: var(--color--summer-yellow);
+}
+
+.card.is--hero.is--apps {
+  background-color: var(--color--pink-salmon);
+}
+
+.card.is--hero.is--photography {
+  background-color: var(--color--cyan);
+  grid-column: span 2;
+}
+
+/* Hero Card Images */
+.hero__card-img {
+  align-self: flex-end;
+}
+
+.hero__card-img.is--graphic {
+  width: 8rem;
+  height: 12rem;
+}
+
+.hero__card-img.is--uiux,
+.hero__card-img.is--apps {
+  width: 4rem;
+  height: 4rem;
+}
