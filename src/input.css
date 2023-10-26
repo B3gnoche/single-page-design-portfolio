@@ -372,6 +372,10 @@ p.is--hero {
   align-items: start;
 }
 
+img.is--about {
+  max-height: 28rem;
+}
+
 @media screen and (max-width: 50rem) {
   .section.is--about {
     padding: 3.75rem 0;
