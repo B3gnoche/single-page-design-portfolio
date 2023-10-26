@@ -362,6 +362,7 @@ p.is--hero {
 }
 
 .grid.is--about {
+  display: flex;
   gap: 7.5rem;
   align-items: center;
 }
@@ -395,6 +396,10 @@ img.is--about {
   .flex.is--about {
     gap: 1.5rem;
   }
+
+  img.is--about {
+    max-height: 22rem;
+  }
 }
 
 @media screen and (max-width: 32rem) {
@@ -403,9 +408,9 @@ img.is--about {
   }
 
   .grid.is--about {
+    flex-direction: column;
     gap: 2.5rem;
     margin-left: 0;
-    grid-template-columns: 1fr;
   }
 
   .container.is--about {
@@ -419,7 +424,7 @@ img.is--about {
   }
 
   img.is--about {
-    padding: 0 calc(var(--continer-width) * 0.05);
+    max-height: 18rem;
   }
 }
 
